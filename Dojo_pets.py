@@ -31,10 +31,10 @@ class Ninja:
     def __init__(self, first_name, last_name, treats, pet, pet_food):
         self.first_name = first_name
         self.last_name = last_name
-        self.pet = pet
+        self.pet = Pet(pet[0], pet[1], pet[2], pet[3], pet[4]) # this line instanciates the Honey pet object when the Steven object is instantiad on line 54
         self.treats = treats
         self.pet_food =  pet_food
-        pass
+
 # these methods are inheriting the methods from the Pet class? 
     def walk(self):
         self.pet.play()
@@ -49,6 +49,10 @@ class Ninja:
 
 # make an instance of a Ninja and assign them an instance of a pet to the pet attribute. 
 
-Steven = Ninja("Steven", "DeTeso", "bones", "Honey", "kibble")
+# Honey = Pet("honey", "english_cream", "pretty", 100, 100)
 
-Honey = Pet("honey", "english_cream", "pretty", 100, 100)
+Steven = Ninja("Steven", "DeTeso", "bones", ["honey", "english_cream", "pretty", 100, 100], "kibble") # the list here is instantiating the Honey object at the same time the Steven object is being instantiated. 
+
+Steven.bathe()
+Steven.walk()
+Steven.feed()
