@@ -35,7 +35,7 @@ class Ninja:
         self.treats = treats
         self.pet_food =  pet_food
 
-# these methods are inheriting the methods from the Pet class? 
+# these methods are inheriting the methods from the Pet class? -> i dont think so, i think its just because the imbedded methods are read first.
     def walk(self):
         self.pet.play()
         return self
@@ -53,6 +53,6 @@ class Ninja:
 
 Steven = Ninja("Steven", "DeTeso", "bones", ["honey", "english_cream", "pretty", 100, 100], "kibble") # the list here is instantiating the Honey object at the same time the Steven object is being instantiated. 
 
-Steven.bathe()
-Steven.walk()
 Steven.feed()
+Steven.walk()
+Steven.bathe()
